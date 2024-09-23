@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviron Passion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .hero {
+            background-image: url('https://example.com/aviron-image.jpg');
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .gallery img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .easter-egg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Aviron Passion</h1>
+        <p>Tout savoir sur l'art de ramer</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#histoire">Histoire</a>
+        <a href="#techniques">Techniques</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Section Hero -->
+    <section class="hero">
+        <h2>Bienvenue dans l'univers de l'aviron</h2>
+    </section>
+
+    <!-- Section Histoire de l'Aviron -->
+    <section id="histoire">
+        <h2>Histoire de l'Aviron</h2>
+        <p>L'aviron est un sport nautique pratiqué depuis des siècles. Il trouve ses racines dans les anciennes civilisations où les bateaux étaient utilisés pour le transport, la pêche et les batailles navales. Aujourd'hui, l'aviron est un sport olympique pratiqué dans le monde entier.</p>
+    </section>
+
+    <!-- Section Techniques de Rame -->
+    <section id="techniques">
+        <h2>Techniques de rame</h2>
+        <p>Le mouvement de rame est complexe et nécessite une coordination parfaite entre les bras, le torse et les jambes. Il existe plusieurs types de courses et de bateaux, incluant le skiff, le double et le huit. Chaque style a ses propres exigences techniques.</p>
+    </section>
+
+    <!-- Galerie de photos -->
+    <section id="galerie">
+        <h2>Galerie de photos d'aviron</h2>
+        <div class="gallery">
+            <img src="https://coach-rameur.com/wp-content/uploads/2023/06/sportsman-single-scull-man-rower-rowing-at-competi-2022-11-16-11-49-46-utc.jpg" alt="Rameur sur l'eau">
+            <img src="https://www.lequotidiendusport.fr/wp-content/uploads/2024/07/ICONSPORT_147759_0045.jpg" alt="Équipe d'aviron en pleine action">
+            <img src="https://www.sportmag.fr/wp-content/uploads/2022/02/Icon_BB210829BB456.jpg" alt="Vue d'ensemble d'une course">
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <p>Email: contact@avironpassion.com</p>
+    </section>
+
+    <!-- Easter Egg invisible -->
+    <div id="easter-egg" class="easter-egg"></div>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Aviron Passion. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Easter Egg
+        document.getElementById('easter-egg').addEventListener('click', function() {
+            alert('Félicitations ! Vous avez découvert un secret caché de l\'aviron !');
+            const secretMessage = document.createElement('div');
+            secretMessage.innerHTML = "<h2>Secret de l'aviron révélé</h2><p>L'endurance et la technique sont les clés du succès en aviron.</p>";
+            document.body.appendChild(secretMessage);
+        });
+
+        // Pour rendre l'élément Easter Egg visible après une combinaison de touches (CTRL + K par exemple)
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'k') {
+                document.getElementById('easter-egg').style.opacity = 1;
+            }
+        });
+    </script>
+
+</body>
+</html>
